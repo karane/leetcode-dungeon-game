@@ -8,7 +8,7 @@ fi
 
 INPUT_FILE="$1"
 # SRC_FILE="many_dungeons.cpp"
-SRC_FILE="many_dungeons _space_optimized.cpp"
+SRC_FILE="many_dungeons_space_optimized.cpp"
 EXE_FILE="dungeon_game"
 
 # Compile the source file
