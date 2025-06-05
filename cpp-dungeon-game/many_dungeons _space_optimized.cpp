@@ -11,14 +11,16 @@ using namespace std::chrono;
 class Solution {
 public:
     int calculateMinimumHP(vector<vector<int>>& dungeon) {
-        int m = dungeon.size();
-        int n = dungeon[0].size();
-        int dp[n + 1];
+        int m = static_cast<int>(dungeon.size());
+        int n = static_cast<int>(dungeon[0].size());
+        int dp[n + 1]; // add extra cell for sentinel value
         memset(dp, 0x3f, sizeof dp);
 
-        dp[n - 1] = 1; //why //sentile value?
+        dp[n - 1] = 1; //sentile value
 
+        // iterate in reverse
         for (int i = m - 1; i >= 0; --i) {
+            // iterate in reverse
             for (int j = n - 1; j >= 0; --j) {
                 dp[j] = max(1, min(dp[j], dp[j + 1]) - dungeon[i][j]);
                 //                       prev_epoch    prev_gate
@@ -57,12 +59,10 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        // Start timing
         auto start = high_resolution_clock::now();
 
         int result = sol.calculateMinimumHP(dungeon);
 
-        // End timing
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<milliseconds>(end - start);
 

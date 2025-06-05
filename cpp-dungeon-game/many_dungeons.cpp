@@ -56,12 +56,11 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        // Start timing
+       
         auto start = high_resolution_clock::now();
 
         int result = sol.calculateMinimumHP(dungeon);
 
-        // End timing
         auto end = high_resolution_clock::now();
         auto duration = duration_cast<milliseconds>(end - start);
 

@@ -6,7 +6,11 @@ MIN_DIMENSIONS = 100
 MAX_DIMENSIONS = 1000
 NUM_TESTS = 10
 def generate_dungeon(rows, cols):
-    return [[random.randint(RANGE_START, RANGE_END) for _ in range(cols)] for _ in range(rows)]
+    return [    
+                [random.randint(RANGE_START, RANGE_END) 
+                    for _ in range(cols)] 
+            for _ in range(rows)
+            ]
 
 def main():
     filename = "large-input.txt"
