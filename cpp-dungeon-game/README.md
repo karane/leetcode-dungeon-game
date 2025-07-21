@@ -51,3 +51,7 @@ python3 generate_large_input.py
 ## General Dynamic Programing Solution - Example
 
 ![Default DP Solution](images/default-dp-solution.png)
+
+## General Dynamic Programing Solution - Optimized - Example
+
+![Default DP Solution](images/dugeon-dp-optimized.png)
