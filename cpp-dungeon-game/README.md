@@ -47,3 +47,7 @@ python3 generate_large_input.py
 ```bash
 ./run.sh large-input.txt
 ```
+
+## General Dynamic Programing Solution - Example
+
+!(Default DP Solution)[./images/default-dp-solution.png]
